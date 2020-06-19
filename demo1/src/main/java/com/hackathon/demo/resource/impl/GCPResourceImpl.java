@@ -69,7 +69,7 @@ public class GCPResourceImpl implements GCPResource {
                     message = "Sorry your order number is invalid please check";
                 }
             }
-
+            return Response.ok(new ResponseDto(message)).build();
         } catch (Exception e) {
             return Response.serverError().entity(new ResponseDto("Unexpected error occurred while processing please check later")).build();
         }
