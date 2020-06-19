@@ -1,0 +1,16 @@
+{
+  "locations": [
+    {
+      "id": "1",
+      "location": "New York"
+    },
+    {
+      "id": "2",
+      "location": "New Jersey"
+    },
+    {
+      "id": "3",
+      "location": "Ohio"
+    }
+  ]
+}

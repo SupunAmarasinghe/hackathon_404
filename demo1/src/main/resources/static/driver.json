@@ -1,0 +1,19 @@
+{
+  "drivers": [
+    {
+      "id": "1",
+      "name": "John",
+      "contactNo": "123456789"
+    },
+    {
+      "id": "2",
+      "name": "Smith",
+      "contactNo": "123456789"
+    },
+    {
+      "id": "3",
+      "name": "Jack",
+      "contactNo": "123465436"
+    }
+  ]
+}
