@@ -21,7 +21,7 @@ import java.util.List;
 public class GCPResourceImpl implements GCPResource {
 
     @GetMapping("/order")
-    public Response getOrderDetails(@RequestParam(value="orderId") String orderId) {
+    public ResponseDto getOrderDetails(@RequestParam(value="orderId") String orderId) {
         try{
             File order = ResourceUtils.getFile("C:\\Users\\User\\Documents\\demo1\\src\\main\\resources\\order.json");
             File location = ResourceUtils.getFile("C:\\Users\\User\\Documents\\demo1\\src\\main\\resources\\location.json");
@@ -69,9 +69,9 @@ public class GCPResourceImpl implements GCPResource {
                     message = "Sorry your order number is invalid please check";
                 }
             }
-            return Response.ok(new ResponseDto(message)).build();
+            return new ResponseDto(message);
         } catch (Exception e) {
-            return Response.serverError().entity(new ResponseDto("Unexpected error occurred while processing please check later")).build();
+            return new ResponseDto("Unexpected error occurred while processing please check later");
         }
     }
 }
